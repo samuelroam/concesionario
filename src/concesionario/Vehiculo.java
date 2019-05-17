@@ -9,46 +9,64 @@ public class Vehiculo {
 	private float precio;
 	private int serie;
 	
+	private int nSerie;
+	private String marca;
+	private String modelo;
+	private String año;
 	
+
 	public String getMatricula() {
 		return matricula;
 	}
+
 	public void setMatricula(String matricula) {
 		this.matricula = matricula;
 	}
+
 	public int getNumBastidor() {
 		return numBastidor;
 	}
+
 	public void setNumBastidor(int numBastidor) {
 		this.numBastidor = numBastidor;
 	}
+
 	public String getColor() {
 		return color;
 	}
+
 	public void setColor(String color) {
 		this.color = color;
 	}
+
 	public String getColorNuevo() {
 		return colorNuevo;
 	}
+
 	public void setColorNuevo(String colorNuevo) {
 		this.colorNuevo = colorNuevo;
 	}
+
 	public int getNumAsientos() {
 		return numAsientos;
 	}
+
 	public void setNumAsientos(int numAsientos) {
 		this.numAsientos = numAsientos;
 	}
+
 	public float getPrecio() {
 		return precio;
 	}
+
 	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
+
 	public int getSerie() {
 		return serie;
 	}
+
 	public void setSerie(int serie) {
 		this.serie = serie;
 	}
