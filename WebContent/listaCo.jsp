@@ -2,7 +2,11 @@
     pageEncoding="ISO-8859-1"%>
     <%@page import="modelo.*" %>
     <%@page import="java.util.ArrayList" %>
-    <%ArrayList<Coche> coches = (ArrayList)request.getAttribute("coches"); %>
+    <%@page import="java.util.Iterator" %>
+    
+    <%
+    CocheModelo cocheModelo = new CocheModelo();
+    ArrayList<Coche> coches = cocheModelo.selectAll(); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +14,32 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<%
+	Iterator<Coche> i = coches.iterator();
+	Coche coche;
+	CocheModelo modeloCoche = new CocheModelo();
+	
+	while(i.hasNext()){
+		coche = i.next();
+		%>
+		<tr>
+			<td>
+				<%=coche.getNumPuertas()%>
+			</td>
+			<td>
+				<%=coche.getCapacidadMaletero()%>
+			</td>
+			<td>
+				 
+			</td>
+			<td>
+<%-- <%				<a class="btn btn-info" href="../VerLibro?id=<%=libro.getId()%>">ver</a>%> --%>
+		</td>
+		</tr>
+		<%
+	}//fin while
+	%> --%>
+	%>
 
 </body>
 </html>
