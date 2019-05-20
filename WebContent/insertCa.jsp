@@ -65,6 +65,7 @@
 	</table>
 	<%
 		out.println("<br>");
+		out.println("<a href='index.jsp'> Volver al inicio </a>");
 		out.println("<a href='co.jsp'> Volver </a>");
 	%>
 
