@@ -8,8 +8,8 @@
 <title>Concesionario - Camiones</title>
 </head>
 <body>
-
-	<p>Placeholder text</p>
+<%@include file="../listaCa.jsp" %>
+	<a href="index.jsp">Volver al inicio</a>
 	<a href="insertCa.jsp">Insertar vehiculo</a>
 
 </body>

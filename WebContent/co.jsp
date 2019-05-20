@@ -8,8 +8,8 @@
 <title>Concesionario - Coches</title>
 </head>
 <body>
-
-	<p>Placeholder text</p>
+<%@include file="../listaCo.jsp" %>
+	<a href="index.jsp">Volver al inicio</a>
 	<a href="insertCo.jsp">Insertar vehiculo</a>
 
 </body>
