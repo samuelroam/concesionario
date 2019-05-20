@@ -25,6 +25,7 @@
 			e.printStackTrace();
 		}
 
+		
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet resultSet = null;
@@ -44,15 +45,15 @@
 			<td><b>numero asientos</b></td>
 			<td><b>precio</b></td>
 			<td><b>serie</b></td>
-			<td><b>numero puertas</b></td>
-			<td><b>capacidad maletero</b></td>
+			<td><b>carga</b></td>
+			<td><b>tipo mercancia</b></td>
 		</tr>
 		<%
 		int i = 0;
 			try {
 				connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 				statement = connection.createStatement();
-				String sql = "SELECT c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.nPuertas, c.cMaletero FROM coches c inner join vehiculo v where c.matricula = v.matricula";
+				String sql = "SELECT c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.carga, c.tMercancia FROM camiones c inner join vehiculos v where c.matricula = v.matricula";
 
 				resultSet = statement.executeQuery(sql);
 				while (resultSet.next()) {
@@ -67,8 +68,8 @@
 			<td><%=resultSet.getString("numAsientos")%></td>
 			<td><%=resultSet.getString("precio")%></td>
 			<td><%=resultSet.getString("nSerie")%></td>
-			<td><%=resultSet.getString("nPuertas")%></td>
-			<td><%=resultSet.getString("cMaletero")%></td>
+			<td><%=resultSet.getString("carga")%></td>
+			<td><%=resultSet.getString("tMercancia")%></td>
 
 
 
@@ -84,6 +85,3 @@
 
 </body>
 </html>
-
-
-

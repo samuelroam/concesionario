@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@page import="modelo.*" %>
-    <%@page import="java.util.ArrayList" %>
-    <%@page import="java.util.Iterator" %>
-    
-    
+	pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,35 +11,77 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
-    CocheModelo cocheModelo = new CocheModelo();
-    ArrayList<Coche> coches = cocheModelo.selectAll(); %>
+
 	<%
-	Iterator<Coche> i = coches.iterator();
-	Coche coche;
-	
-	
-	while(i.hasNext()){
-		coche = i.next();
-		%>
+		String driverName = "com.mysql.jdbc.Driver";
+		String connectionUrl = "jdbc:mysql://10.18.124.73:3306/";
+		String dbName = "concesionario";
+		String userId = "gerente";
+		String password = "root";
+
+		try {
+			Class.forName(driverName);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		
+		Connection connection = null;
+		Statement statement = null;
+		ResultSet resultSet = null;
+	%>
+	<h2 align="center">
+		<font color="#FF00FF"><strong>Select query in JSP</strong></font>
+	</h2>
+	<table align="center" cellpadding="4" cellspacing="4">
 		<tr>
-			<td>
-				<%=coche.getNumPuertas()%>
-			</td>
-			<td>
-				<%=coche.getCapacidadMaletero()%>
-			</td>
-			<td>
-				 
-			</td>
-			<td>
-<%-- <%				<a class="btn btn-info" href="../VerLibro?id=<%=libro.getId()%>">ver</a>%> --%>
-		</td>
+
+		</tr>
+		<tr bgcolor="#008000">
+			<td><b>numero</b></td>
+			<td><b>matricula</b></td>
+			<td><b>bastidor</b></td>
+			<td><b>color</b></td>
+			<td><b>numero asientos</b></td>
+			<td><b>precio</b></td>
+			<td><b>serie</b></td>
+			<td><b>numero puertas</b></td>
+			<td><b>capacidad maletero</b></td>
 		</tr>
 		<%
-	}//fin while
-	%> --%>
-	%>
+		int i = 0;
+			try {
+				connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
+				statement = connection.createStatement();
+				String sql = "SELECT c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.nPuertas, c.cMaletero FROM coches c inner join vehiculos v where c.matricula = v.matricula";
+
+				resultSet = statement.executeQuery(sql);
+				while (resultSet.next()) {
+					i++;
+		%>
+		<tr bgcolor="#8FBC8F">
+
+			<td><% out.println(i); %></td>
+			<td><%=resultSet.getString("matricula")%></td>
+			<td><%=resultSet.getString("numBastidor")%></td>
+			<td><%=resultSet.getString("color")%></td>
+			<td><%=resultSet.getString("numAsientos")%></td>
+			<td><%=resultSet.getString("precio")%></td>
+			<td><%=resultSet.getString("nSerie")%></td>
+			<td><%=resultSet.getString("nPuertas")%></td>
+			<td><%=resultSet.getString("cMaletero")%></td>
+
+
+
+			<%
+				}
+
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			%>
+		
+	</table>
 
 </body>
 </html>
