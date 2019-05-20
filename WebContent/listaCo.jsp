@@ -4,9 +4,7 @@
     <%@page import="java.util.ArrayList" %>
     <%@page import="java.util.Iterator" %>
     
-    <%
-    CocheModelo cocheModelo = new CocheModelo();
-    ArrayList<Coche> coches = cocheModelo.selectAll(); %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,10 +12,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+    CocheModelo cocheModelo = new CocheModelo();
+    ArrayList<Coche> coches = cocheModelo.selectAll(); %>
 	<%
 	Iterator<Coche> i = coches.iterator();
 	Coche coche;
-	CocheModelo modeloCoche = new CocheModelo();
+	
 	
 	while(i.hasNext()){
 		coche = i.next();
