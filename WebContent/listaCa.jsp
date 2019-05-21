@@ -53,7 +53,7 @@
 			try {
 				connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 				statement = connection.createStatement();
-				String sql = "SELECT c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.carga, c.tMercancia FROM camiones c inner join vehiculos v where c.matricula = v.matricula";
+				String sql = "SELECT v.idVehiculo, c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.carga, c.tMercancia FROM camiones c inner join vehiculos v where c.matricula = v.matricula";
 
 				resultSet = statement.executeQuery(sql);
 				while (resultSet.next()) {
@@ -61,7 +61,8 @@
 		%>
 		<tr bgcolor="#8FBC8F">
 
-			<td><% out.println(i); %></td>
+<%-- 			<td><% out.println(i); %></td> --%>
+			<td><%=resultSet.getString("idVehiculo")%></td>
 			<td><%=resultSet.getString("matricula")%></td>
 			<td><%=resultSet.getString("numBastidor")%></td>
 			<td><%=resultSet.getString("color")%></td>

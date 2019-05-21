@@ -42,8 +42,8 @@
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor)values('" + matricula
-					+ "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor + "')";
+			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,tipoVehiculo)values('" + matricula
+					+ "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor + "','coche')";
 			statement.executeUpdate(sql);
 
 		} catch (Exception e) {
@@ -55,6 +55,7 @@
 			String sql = "insert into coches(matricula,nPuertas,cMaletero)values('" + matricula + "','"
 					+ numPuertas + "','" + cMaletero + "')";
 			statement.executeUpdate(sql);
+			response.sendRedirect("success.html");
 			
 
 		} catch (Exception e) {
