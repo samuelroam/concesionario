@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Concesionario</title>
 </head>
-<body>
+<body style="background-image:url('coche1.jpg')">
 
 	<h1>SELECIONA TIPO DE VEHICULO</h1>
 	<a href="co.jsp">Coche</a>

@@ -1,22 +1,42 @@
 @charset "ISO-8859-1";
 body{
-	background-color:azure;
 	
+	background-image: url("coche1.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 h1{
 	text-align: center;
 	color: #f0595e;
 }
+h2{
+	color:white;
+}
 a{
 	text-align: center;
-	color: black;
+	color: white;
 	margin-left:29%;
 	font-size:20px;
 	transition:1s;
+}
+.insertar{
+	color:white;
+}
+.insert{
+	color:white;
+	text-shadow: 5px 4px 2px #000000;
 }
 a:hover{
 	font-size:30px;
 }
 #tab{
 	margin-left:22%;
+}
+.tabla{
+	background-color:lightgreen;
+	color:#000000;
+	transition: none;
+}
+.tabla:hover{
+	font-size:20px;
 }

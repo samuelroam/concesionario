@@ -31,13 +31,13 @@
 		ResultSet resultSet = null;
 	%>
 	<h2 align="center">
-		<font color="#FF00FF"><strong>Select query in JSP</strong></font>
+		<font color="#f0595e"><strong>Select query in JSP</strong></font>
 	</h2>
 	<table align="center" cellpadding="4" cellspacing="4">
 		<tr>
 
 		</tr>
-		<tr bgcolor="#008000">
+		<tr bgcolor="#00a080">
 			<td><b>numero</b></td>
 			<td><b>matricula</b></td>
 			<td><b>bastidor</b></td>

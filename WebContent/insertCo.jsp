@@ -14,45 +14,40 @@
 				<form method="POST" action="save.jsp">
 
 					<h2 align="center">AÑADIR COCHE</h2>
-					<table border="1" width="100%">
-						<tr>
+					<table class="insertar" border="1" width="100%">
+						<tr class="insert">
 							<td width="50%"><b>Matricula:</b></td>
 							<td width="50%"><input type="text" name="name" size="50" />
 							</td>
 						</tr>
-						<tr>
+						<tr class="insert">
 							<td width="50%"><b>numBastidor:</b></td>
 							<td width="50%"><input type="text" name="city" size="50"></td>
 						</tr>
-						<tr>
+						<tr class="insert">
 							<td width="50%"><b>Color:</b></td>
 							<td width="50%"><input type="text" name="telephone"
-								size="15"></td>
+								size="50"></td>
 						</tr>
-						<tr>
+						<tr class="insert">
 							<td width="50%"><b>numAsientos:</b></td>
 							<td width="50%"><input type="text" name="telephone"
-								size="15"></td>
+								size="50"></td>
 						</tr>
-						<tr>
+						<tr class="insert">
 							<td width="50%"><b>precio:</b></td>
 							<td width="50%"><input type="text" name="telephone"
-								size="15"></td>
+								size="50"></td>
 						</tr>
-						<tr>
-							<td width="50%"><b>serie:</b></td>
-							<td width="50%"><input type="text" name="telephone"
-								size="15"></td>
-						</tr>
-						<tr>
+						<tr class="insert">
 							<td width="50%"><b>numPuertas:</b></td>
 							<td width="50%"><input type="text" name="telephone"
-								size="15"></td>
+								size="50"></td>
 						</tr>
-						<tr>
+						<tr class="insert">
 							<td width="50%"><b>capacidadMaletero:</b></td>
 							<td width="50%"><input type="text" name="telephone"
-								size="15"></td>
+								size="50"></td>
 						</tr>
 					</table>
 					<p>
@@ -65,8 +60,8 @@
 	</table>
 	<%
 		out.println("<br>");
-		out.println("<a href='index.jsp'> Volver al inicio </a>");
-		out.println("<a href='co.jsp'> Volver </a>");
+		out.println("<a class='tabla' href='index.jsp'> Volver al inicio </a>");
+		out.println("<a class='tabla' href='co.jsp'> Volver </a>");
 		
 	%>
 </body>

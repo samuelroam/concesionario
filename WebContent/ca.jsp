@@ -9,8 +9,8 @@
 </head>
 <body>
 <%@include file="../listaCa.jsp" %>
-	<a href="index.jsp">Volver al inicio</a>
-	<a href="insertCa.jsp">Insertar vehiculo</a>
+	<a class="tabla" href="index.jsp">Volver al inicio</a>
+	<a class="tabla" href="insertCa.jsp">Insertar vehiculo</a>
 
 </body>
 </html>
