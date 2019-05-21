@@ -37,27 +37,29 @@
 		String numPuertas = request.getParameter("numPuertas");
 		String cMaletero = request.getParameter("cMaletero");
 
+		
+
+		try {
+			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
+			statement = connection.createStatement();
+			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor)values('" + matricula
+					+ "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor + "')";
+			statement.executeUpdate(sql);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+ 		}
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
 			String sql = "insert into coches(matricula,nPuertas,cMaletero)values('" + matricula + "','"
 					+ numPuertas + "','" + cMaletero + "')";
 			statement.executeUpdate(sql);
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-// 		try {
-// 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
-// 			statement = connection.createStatement();
-// 			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor)values('" + matricula
-// 					+ "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor + "')";
-// 			statement.executeUpdate(sql);
-
-// 		} catch (Exception e) {
-// 			e.printStackTrace();
-// 		}
 
 		// 		try {
 		// 			Class.forName("com.mysql.jdbc.Driver");

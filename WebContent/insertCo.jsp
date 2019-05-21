@@ -17,37 +17,37 @@
 					<table class="insertar" border="1" width="100%">
 						<tr class="insert">
 							<td width="50%"><b>Matricula:</b></td>
-							<td width="50%"><input type="text" name="matricula" size="50" value="1234BCD" />
+							<td width="50%"><input type="text" name="matricula" size="50" />
 							</td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>numBastidor:</b></td>
-							<td width="50%"><input type="number" name="numBastidor" size="50" value="1234"></td>
+							<td width="50%"><input type="number" name="numBastidor" size="50"></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>Color:</b></td>
 							<td width="50%"><input type="text" name="color"
-								size="50" value="rojo"></td>
+								size="50" ></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>numAsientos:</b></td>
 							<td width="50%"><input type="text" name="numAsientos"
-								size="50" value="2"></td>
+								size="50" ></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>precio:</b></td>
 							<td width="50%"><input type="text" name="precio"
-								size="50" value="70000"></td>
+								size="50" ></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>numPuertas:</b></td>
 							<td width="50%"><input type="text" name="numPuertas"
-								size="50" value="2"></td>
+								size="50" ></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>capacidadMaletero:</b></td>
 							<td width="50%"><input type="text" name="cMaletero"
-								size="50" value="250"></td>
+								size="50" ></td>
 						</tr>
 					</table>
 		<p>
