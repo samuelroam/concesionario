@@ -11,7 +11,7 @@
 	<table border="1" width="50%" id="tab">
 		<tr>
 			<td width="100%">
-				<form method="POST" action="save.jsp">
+				<form method="POST" action="saveCo.jsp">
 
 					<h2 align="center">AÑADIR COCHE</h2>
 					<table class="insertar" border="1" width="100%">

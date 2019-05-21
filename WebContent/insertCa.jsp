@@ -11,7 +11,7 @@
 	<table border="1" width="50%" id="tab">
 		<tr>
 			<td width="100%">
-				<form method="POST" action="save.jsp">
+				<form method="POST" action="saveCa.jsp">
 
 					<h2 align="center">AÑADIR CAMION</h2>
 					<table class="insertar" border="1" width="100%">
@@ -22,7 +22,7 @@
 						</tr>
 						<tr>
 							<td width="50%"><b>numBastidor:</b></td>
-							<td width="50%"><input type="text" name="bastidor" size="50"></td>
+							<td width="50%"><input type="text" name="numBastidor" size="50"></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>Color:</b></td>
@@ -31,7 +31,7 @@
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>numAsientos:</b></td>
-							<td width="50%"><input type="text" name="asientos"
+							<td width="50%"><input type="text" name="numAsientos"
 								size="50"></td>
 						</tr>
 						<tr class="insert">
@@ -46,7 +46,7 @@
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>tipoMercancia:</b></td>
-							<td width="50%"><input type="text" name="mercancia"
+							<td width="50%"><input type="text" name="tMercancia"
 								size="50"></td>
 						</tr>
 					</table>
