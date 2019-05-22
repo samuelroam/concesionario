@@ -25,7 +25,6 @@
 			e.printStackTrace();
 		}
 
-		
 		Connection connection = null;
 		Statement statement = null;
 		ResultSet resultSet = null;
@@ -33,47 +32,53 @@
 	<h2 align="center">
 		<font color="#f0595e"><strong>Select query in JSP</strong></font>
 	</h2>
-	<table align="center" cellpadding="4" cellspacing="4">
-		<tr>
+	<form method="POST" action="deleteCo.jsp">
+		<table align="center" cellpadding="4" cellspacing="4">
 
-		</tr>
-		<tr bgcolor="#00a080">
-			<td><b>numero</b></td>
-			<td><b>matricula</b></td>
-			<td><b>bastidor</b></td>
-			<td><b>color</b></td>
-			<td><b>numero asientos</b></td>
-			<td><b>precio</b></td>
-			<td><b>serie</b></td>
-			<td><b>numero puertas</b></td>
-			<td><b>capacidad maletero</b></td>
-			<td><b>borrar</b></td>
-		</tr>
-		<%
-		int i = 0;
-			try {
-				connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
-				statement = connection.createStatement();
-				String sql = "SELECT v.idVehiculo, c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.nPuertas, c.cMaletero FROM coches c inner join vehiculos v where c.matricula = v.matricula";
+			<tr>
 
-				resultSet = statement.executeQuery(sql);
-				while (resultSet.next()) {
-					i++;
-		%>
-		<tr bgcolor="#8FBC8F">
+			</tr>
+			<tr bgcolor="#00a080">
+				<td><b>numero</b></td>
+				<td><b>matricula</b></td>
+				<td><b>bastidor</b></td>
+				<td><b>color</b></td>
+				<td><b>numero asientos</b></td>
+				<td><b>precio</b></td>
+				<td><b>serie</b></td>
+				<td><b>numero puertas</b></td>
+				<td><b>capacidad maletero</b></td>
+				<td><b>borrar</b></td>
+			</tr>
+			<%
+				int i = 0;
+				try {
+					connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
+					statement = connection.createStatement();
+					String sql = "SELECT v.idVehiculo, c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.nPuertas, c.cMaletero FROM coches c inner join vehiculos v where c.matricula = v.matricula";
 
-<%-- 			<td><% out.println(i); %></td> --%>
-			<td><%=resultSet.getString("idVehiculo")%></td>
-			<td><%=resultSet.getString("matricula")%></td>
-			<td><%=resultSet.getString("numBastidor")%></td>
-			<td><%=resultSet.getString("color")%></td>
-			<td><%=resultSet.getString("numAsientos")%></td>
-			<td><%=resultSet.getString("precio")%></td>
-			<td><%=resultSet.getString("nSerie")%></td>
-			<td><%=resultSet.getString("nPuertas")%></td>
-			<td><%=resultSet.getString("cMaletero")%></td>
-			<td><imput type="checkbox"></imput>
+					resultSet = statement.executeQuery(sql);
+					while (resultSet.next()) {
+						i++;
+			%>
 
+			<tr bgcolor="#8FBC8F">
+
+
+				<%-- 			<td><% out.println(i); %></td> --%>
+				<td><%=resultSet.getString("idVehiculo")%></td>
+				<td><%=resultSet.getString("matricula")%></td>
+				<td><%=resultSet.getString("numBastidor")%></td>
+				<td><%=resultSet.getString("color")%></td>
+				<td><%=resultSet.getString("numAsientos")%></td>
+				<td><%=resultSet.getString("precio")%></td>
+				<td><%=resultSet.getString("nSerie")%></td>
+				<td><%=resultSet.getString("nPuertas")%></td>
+				<td><%=resultSet.getString("cMaletero")%></td>
+				<td><input type="checkbox" name="delete" value="<%=resultSet.getString("idVehiculo")%>"></input></td>
+
+
+			</tr>
 
 
 			<%
@@ -83,8 +88,9 @@
 					e.printStackTrace();
 				}
 			%>
-		
-	</table>
 
+		</table>
+		<input type="submit" name="borrar" value="borrar">
+	</form>
 </body>
 </html>
