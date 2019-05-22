@@ -75,8 +75,8 @@
 				<td><%=resultSet.getString("nSerie")%></td>
 				<td><%=resultSet.getString("nPuertas")%></td>
 				<td><%=resultSet.getString("cMaletero")%></td>
-				<td><input type="checkbox" name="delete" value="<%=resultSet.getString("idVehiculo")%>"></input></td>
-
+				<td><input type="radio" name="select" value="<%=resultSet.getString("idVehiculo")%>"></input></td>
+				<td><a href="../concesionario/editarCo.jsp?idVehiculo=<%=resultSet.getString("idVehiculo") %>">editar</a></td>
 
 			</tr>
 

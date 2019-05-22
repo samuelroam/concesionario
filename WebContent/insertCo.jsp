@@ -17,7 +17,7 @@
 					<table class="insertar" border="1" width="100%">
 						<tr class="insert">
 							<td width="50%"><b>Matricula:</b></td>
-							<td width="50%"><input type="text" name="matricula" size="50" placeholder="Matricula" minlength="6" maxlength="7" required pattern="[A-Z0-9]{6,7}" title="Numeros y Mayusculas" />
+							<td width="50%"><input type="text" name="matricula" size="50" placeholder="<%=request.getParameter("matricula") %>" minlength="6" maxlength="7" required pattern="[A-Z0-9]{6,7}" title="Numeros y Mayusculas" />
 							</td>	
 						</tr>
 						<tr>

@@ -71,8 +71,7 @@
 				<td><%=resultSet.getString("nSerie")%></td>
 				<td><%=resultSet.getString("carga")%></td>
 				<td><%=resultSet.getString("tMercancia")%></td>
-				<td><input type="checkbox" name="delete"></input></td>
-
+				<td><input type="radio" name="select" value="<%=resultSet.getString("idVehiculo")%>"></input></td>
 			</tr>
 
 			<%

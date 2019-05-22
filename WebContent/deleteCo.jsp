@@ -26,13 +26,13 @@
 		ResultSet resultSet = null;
 		
 		
-		String delete= request.getParameter("delete");
+		String select= request.getParameter("select");
 		
 		
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "delete from vehiculos where idVehiculo="+delete+";";
+			String sql = "delete from vehiculos where idVehiculo="+select+";";
 					statement.executeUpdate(sql);
 					response.sendRedirect("listaCo.jsp");
 
