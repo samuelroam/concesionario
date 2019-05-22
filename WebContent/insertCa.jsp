@@ -13,16 +13,24 @@
 			<td width="100%">
 				<form method="POST" action="saveCa.jsp">
 
-					<h2 align="center">AÑADIR CAMION</h2>
+					<h2 align="center">AÃ‘ADIR CAMION</h2>
 					<table class="insertar" border="1" width="100%">
 						<tr class="insert">
 							<td width="50%"><b>Matricula:</b></td>
+<<<<<<< HEAD
 							<td width="50%"><input type="text" name="matricula" size="50" placeholder="Matricula" minlength="6" maxlength="7" required pattern="[A-Z0-9]{6,7}" title="Numeros y Mayusculas"/>
 							</td>
+=======
+											<td width="50%"><input type="text" name="matricula" size="50" placeholder="Matricula" minlength="6" maxlength="7" required pattern="[A-Z0-9]{6,7}" title="Numeros y Mayusculas"/></td>
+>>>>>>> branch 'master' of https://github.com/samuelroam/concesionario.git
 						</tr>
 						<tr>
 							<td width="50%"><b>numBastidor:</b></td>
+<<<<<<< HEAD
 							<td width="50%"><input type="text" name="numBastidor" size="50" placeholder="Nº Bastidor" minlength="4" maxlength="4" required pattern="[0-9]{4}" title="Numero de 4 cifras"></td>
+=======
+							<td width="50%"><input type="text" name="bastidor" size="50" placeholder="NÂº Bastidor" minlength="4" maxlength="4" required pattern="[0-9]{4}" title="Numero de 4 cifras"></td>
+>>>>>>> branch 'master' of https://github.com/samuelroam/concesionario.git
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>Color:</b></td>
@@ -31,8 +39,13 @@
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>numAsientos:</b></td>
+<<<<<<< HEAD
 							<td width="50%"><input type="text" name="numAsientos"
 								size="50" placeholder="Nº Asientos" minlength="1" maxlength="1" required pattern="[1-9]{1}" title="Numero del 1 al 9"></td>
+=======
+							<td width="50%"><input type="text" name="asientos"
+								size="50" placeholder="NÂº Asientos" minlength="1" maxlength="1" required pattern="[1-9]{1}" title="Numero del 1 al 9"></td>
+>>>>>>> branch 'master' of https://github.com/samuelroam/concesionario.git
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>precio:</b></td>
@@ -46,13 +59,19 @@
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>tipoMercancia:</b></td>
+<<<<<<< HEAD
 							<td width="50%"><input type="text" name="tMercancia"
 								size="50" placeholder="Tipo de Mercancia" minlength="1" maxlength="1" required pattern="[A,G,P]{1}" title="Letra A,G ó P"></td>
+=======
+							<td width="50%"><input type="text" name="mercancia"
+								size="50" placeholder="Tipo de Mercancia" minlength="1" maxlength="1" required pattern="[A,G,P]{1}" title="Letra A,G Ã³ P"></td>
+>>>>>>> branch 'master' of https://github.com/samuelroam/concesionario.git
 						</tr>
 					</table>
 					<p>
 						<input type="submit" value="Enviar" name="Enviar"> <input
 							type="reset" value="Borrar" name="Borrar">
+							
 					</p>
 				</form>
 			</td>
