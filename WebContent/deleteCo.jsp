@@ -32,8 +32,8 @@
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = 'delete from vehiculos where idVehiculo='+"delete"';
-					statement.executeQuery(sql);
+			String sql = "delete from vehiculos where idVehiculo="+delete+";";
+					statement.executeUpdate(sql);
 					response.sendRedirect("listaCo.jsp");
 
 		} catch (Exception e) {

@@ -13,7 +13,7 @@
 			<td width="100%">
 				<form method="POST" action="saveCo.jsp">
 
-					<h2 align="center">AÃÑADIR COCHE</h2>
+					<h2 align="center">AÑADIR COCHE</h2>
 					<table class="insertar" border="1" width="100%">
 						<tr class="insert">
 							<td width="50%"><b>Matricula:</b></td>
