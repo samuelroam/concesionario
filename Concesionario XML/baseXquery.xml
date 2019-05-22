@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="estilos.css"?>
+<concesionario>
+  <vehiculos>
+  <p>matricula | asientos | color | precio | Nº bastidor | serie | puertas | capacidad</p>
+    <vehiculo class="fila" tipo="coche">  
+      <matricula>1234ABC</matricula>
+      <asientos>4</asientos>
+      <color>rojo</color>
+      <precio>5000</precio>
+      <bastidor>1234</bastidor>
+      <serie>3214</serie>
+      <puertas>5</puertas>
+      <capacidad>500</capacidad>
+    </vehiculo>
+    <p class="p2">matricula | asientos | color | precio | Nº bastidor | serie | carga</p>
+    <vehiculo class="fila" tipo="camion">    
+      <matricula>1111AAA</matricula>
+      <asientos>2</asientos>
+      <color>azul</color>
+      <precio>7000</precio>
+      <bastidor>1234</bastidor>
+      <serie>2413</serie>
+      <carga mercancia="A">666</carga>
+  </vehiculo>
+ </vehiculos>
+</concesionario>
+

@@ -1,0 +1,51 @@
+concesionario{
+	background-color: azure;
+}
+vehiculo{
+	display: block;
+	margin-left: 30%;
+	font-size: 25px;
+	padding: 1%;
+	text-align: center;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+	margin-right: 32%;
+	background-color: lightyellow;
+}
+carga{
+	padding-left: 10%;
+}
+p{
+	display: block;
+	font-size: 25px;
+	color: red;
+	padding: 1%;
+	text-align: center;
+}
+.p2{
+	text-align: left;
+}
+matricula{
+	padding-right: 5%;
+}
+asientos{
+	padding-right: 5%;
+}
+color{
+	padding-right: 5%;
+}
+precio{
+	padding-right: 5%;
+}
+bastidor{
+	padding-right: 5%;
+}
+serie{
+	padding-left: 5%;
+}
+puertas{
+	padding-left: 5%;
+}
+capacidad{
+	padding-left: 5%;
+}
