@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="estilo.css"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="concesionario">
+	<table_structure name="vehiculos">
+		<field Field="matricula" Type="varchar(7)" Null="NO" Key="PRI" Extra="" Comment="" />
+		<field Field="numAsientos" Type="varchar(1)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="color" Type="varchar(10)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="precio" Type="varchar(6)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="numBastidor" Type="varchar(4)" Null="YES" Key="" Extra="" Comment="" />
+		<field Field="nSerie" Type="varchar(45)" Null="YES" Key="MUL" Extra="" Comment="" />
+		<key Table="vehiculos" Non_unique="0" Key_name="PRIMARY" Seq_in_index="1" Column_name="matricula" Collation="A" Cardinality="5" Null="" Index_type="BTREE" Comment="" Index_comment="" Visible="YES" />
+		<key Table="vehiculos" Non_unique="1" Key_name="nSerie_idx" Seq_in_index="1" Column_name="nSerie" Collation="A" Cardinality="5" Null="YES" Index_type="BTREE" Comment="" Index_comment="" Visible="YES" />
+		<options Name="vehiculos" Engine="InnoDB" Version="10" Row_format="Dynamic" Rows="5" Avg_row_length="3276" Data_length="16384" Max_data_length="0" Index_length="16384" Data_free="0" Create_time="2019-05-21 07:45:12" Update_time="2019-05-21 07:45:12" Collation="utf8mb4_0900_ai_ci" Create_options="" Comment="" />
+	</table_structure>
+	<p>matricula | asientos | color | precio | numerobastidor | serie</p>
+	<table_data id="tabla" name="vehiculos">
+	<row class="fila">
+		<field name="matricula">4860HBB</field>
+		<field name="numAsientos">5</field>
+		<field name="color">rojo</field>
+		<field name="precio">31000</field>
+		<field name="numBastidor">1144</field>
+		<field name="nSerie">5032</field>
+	</row>
+	<row class="fila">
+		<field name="matricula">4896BBB</field>
+		<field name="numAsientos">5</field>
+		<field name="color">blanco</field>
+		<field name="precio">25000</field>
+		<field name="numBastidor">2514</field>
+		<field name="nSerie">7890</field>
+	</row>
+	<row class="fila">
+		<field name="matricula">7484JBB</field>
+		<field name="numAsientos">4</field>
+		<field name="color">verde</field>
+		<field name="precio">35200</field>
+		<field name="numBastidor">5141</field>
+		<field name="nSerie">5485</field>
+	</row>
+	<row class="fila">
+		<field name="matricula">7952CBB</field>
+		<field name="numAsientos">5</field>
+		<field name="color">negro</field>
+		<field name="precio">29000</field>
+		<field name="numBastidor">5511</field>
+		<field name="nSerie">5895</field>
+	</row>
+	<row class="fila">
+		<field name="matricula">8967BDD</field>
+		<field name="numAsientos">4</field>
+		<field name="color">azul</field>
+		<field name="precio">30000</field>
+		<field name="numBastidor">1541</field>
+		<field name="nSerie">9345</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>
