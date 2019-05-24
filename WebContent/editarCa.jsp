@@ -30,7 +30,7 @@
 	try {
 		connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 		statement = connection.createStatement();
-		String sql = "SELECT v.idVehiculo, c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.nPuertas, c.cMaletero FROM coches c inner join vehiculos v where c.matricula = v.matricula and v.idVehiculo like "+idVehiculo;
+		String sql = "SELECT v.idVehiculo, c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.carga, c.tMercancia FROM camiones c inner join vehiculos v where c.matricula = v.matricula and v.idVehiculo like "+idVehiculo;
 
 		resultSet = statement.executeQuery(sql);
 		while (resultSet.next()){
@@ -39,9 +39,9 @@
 	<table border="1" width="50%" id="tab">
 		<tr>
 			<td width="100%">
-				<form method="POST" action="updateCo.jsp">
+				<form method="POST" action="updateCa.jsp">
 
-					<h2 align="center">AÑADIR COCHE</h2>
+					<h2 align="center">AÑADIR CAMION</h2>
 					<table class="insertar" border="1" width="100%">
 						<tr class="insert">
 							<td width="50%"><b>Id:</b></td>
@@ -75,14 +75,14 @@
 								size="50" value="<%=resultSet.getString("precio")%>" placeholder="<%=resultSet.getString("precio")%>" minlength="4" maxlength="6" required pattern="[0-9]{4,6}" title="Numero de 4 a 6 cifras"></td>
 						</tr>
 						<tr class="insert">
-							<td width="50%"><b>numPuertas:</b></td>
-							<td width="50%"><input type="text" name="numPuertas"
-							size="50" value="<%=resultSet.getString("nPuertas")%>" placeholder="<%=resultSet.getString("nPuertas")%>" minlength="1" maxlength="1" required pattern="[2-4]{1}" title="Numero de 2 a 4"></td>	
+							<td width="50%"><b>Carga:</b></td>
+							<td width="50%"><input type="text" name="carga"
+								size="50" value="<%=resultSet.getString("carga")%>" placeholder="<%=resultSet.getString("carga")%>" minlength="3" maxlength="3" required pattern="[0-9]{3}" title="Numero de 3 cifras"></td>
 						</tr>
 						<tr class="insert">
-							<td width="50%"><b>capacidadMaletero:</b></td>
-							<td width="50%"><input type="text" name="cMaletero"
-								size="50" value="<%=resultSet.getString("cMaletero")%>" placeholder="<%=resultSet.getString("cMaletero")%>" minlength="3" maxlength="4" required pattern="[0-9]{3,4}" title="Numero de 3 a 4 cifras"></td>
+							<td width="50%"><b>tipoMercancia:</b></td>
+							<td width="50%"><input type="text" name="tMercancia"
+								size="50" value="<%=resultSet.getString("tMercancia")%>" placeholder="<%=resultSet.getString("tMercancia")%>" minlength="1" maxlength="1" required pattern="[A,G,P]{1}" title="Letra A,G ó P"></td>
 						</tr>
 					</table>
 		<p>

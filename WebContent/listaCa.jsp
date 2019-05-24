@@ -14,7 +14,7 @@
 
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
-		String connectionUrl = "jdbc:mysql://10.18.124.73:3306/";
+		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
 		String dbName = "concesionario";
 		String userId = "gerente";
 		String password = "root";
@@ -72,6 +72,7 @@
 				<td><%=resultSet.getString("carga")%></td>
 				<td><%=resultSet.getString("tMercancia")%></td>
 				<td><input type="radio" name="select" value="<%=resultSet.getString("idVehiculo")%>"></input></td>
+				<td><a href="../concesionario/editarCa.jsp?idVehiculo=<%=resultSet.getString("idVehiculo") %>">editar</a></td>
 			</tr>
 
 			<%

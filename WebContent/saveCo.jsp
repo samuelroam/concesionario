@@ -11,7 +11,7 @@
 <body>
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
-		String connectionUrl = "jdbc:mysql://10.18.124.73:3306/";
+		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
 		String dbName = "concesionario";
 		String userId = "gerente";
 		String password = "root";
@@ -36,9 +36,11 @@
 		String precio = request.getParameter("precio");
 		String numPuertas = request.getParameter("numPuertas");
 		String cMaletero = request.getParameter("cMaletero");
+		
+		String idVehiculo;
 
 		
-
+		// inserta en la tabla de vehiculos
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
@@ -49,10 +51,24 @@
 		} catch (Exception e) {
 			e.printStackTrace();
  		}
+// 		//busca la id de vehiculos
+// 				try {
+// 					connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
+// 					statement = connection.createStatement();
+// 					String sql = "select last_insert_id() from vehiculos";
+// 					resultSet=statement.executeQuery(sql);
+					
+
+// 				} catch (Exception e) {
+// 					e.printStackTrace();
+// 				}
+// 	//	idVehiculo=resultSet.getString("last_insert_id()");
+		
+		//inserta en la tabla de coches
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "insert into coches(matricula,nPuertas,cMaletero)values('" + matricula + "','"
+			String sql = "insert into coches(idVehiculo,matricula,nPuertas,cMaletero)values((select max(idVehiculo) from vehiculos),'" + matricula + "','"
 					+ numPuertas + "','" + cMaletero + "')";
 			statement.executeUpdate(sql);
 			response.sendRedirect("success.html");
@@ -61,6 +77,7 @@
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
 	%>
 </body>
 </html>

@@ -34,8 +34,8 @@
 		String color = request.getParameter("color");
 		String numAsientos = request.getParameter("numAsientos");
 		String precio = request.getParameter("precio");
-		String numPuertas = request.getParameter("numPuertas");
-		String cMaletero = request.getParameter("cMaletero");
+		String carga = request.getParameter("carga");
+		String tMercancia = request.getParameter("tMercancia");
 
 		
 
@@ -46,23 +46,23 @@
 // 					"insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,tipoVehiculo)values('" + matricula
 // 					+ "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor + "','coche')";
 			statement.executeUpdate(sql);
+			response.sendRedirect("ca.jsp");
 
 		} catch (Exception e) {
 			e.printStackTrace();
  		}
-		
-		try {
-			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
-			statement = connection.createStatement();
-			String sql = "update coches set matricula='"+matricula+"', nPuertas='"+numPuertas+"',cMaletero='"+cMaletero+"'where idVehiculo='"+idVehiculo+"';";
-			statement.executeUpdate(sql);
-			
-			response.sendRedirect("co.jsp");
+// 		try {
+// 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
+// 			statement = connection.createStatement();
+// 			String sql = "insert into coches(matricula,nPuertas,cMaletero)values('" + matricula + "','"
+// 					+ numPuertas + "','" + cMaletero + "')";
+// 			statement.executeUpdate(sql);
+// 			response.sendRedirect("success.html");
 			
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+// 		} catch (Exception e) {
+// 			e.printStackTrace();
+// 		}
 	%>
 </body>
 </html>
