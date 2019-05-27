@@ -37,47 +37,32 @@
 		String carga = request.getParameter("carga");
 		String tMercancia = request.getParameter("tMercancia");
 
-		
-
 		// inserta en la tabla de vehiculos
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,tipoVehiculo)values('" + matricula
-					+ "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor + "','camion')";
+			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,tipoVehiculo)values('"
+					+ matricula + "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor
+					+ "','camion')";
 			statement.executeUpdate(sql);
 
 		} catch (Exception e) {
 			e.printStackTrace();
- 		}
+			response.sendRedirect("fallo.html");
+		}
 		// inserta en la tabla camiones
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "insert into camiones(idVehiculo,matricula,carga,tMercancia)values((select max(idVehiculo) from vehiculos),'" + matricula + "','"
-					+ carga + "','" + tMercancia + "')";
+			String sql = "insert into camiones(idVehiculo,matricula,carga,tMercancia)values((select max(idVehiculo) from vehiculos),'"
+					+ matricula + "','" + carga + "','" + tMercancia + "')";
 			statement.executeUpdate(sql);
-// 			statement.close();
 			response.sendRedirect("success.html");
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			response.sendRedirect("fallo.html");
 		}
-
-		// 		try {
-		// 			Class.forName("com.mysql.jdbc.Driver");
-		// 			Connection conn = DriverManager.getConnection("jdbc:mysql://10.18.124.73:3306/concesionario", "gerente", "root");
-		// 			Statement st = conn.createStatement();
-
-		// 			int i = st.executeUpdate("insert into coches(matricula,nPuertas,cMaletero)values('" + matricula
-		// 					+ "','" + numPuertas + "','" + cMaletero + "');insert into vehiculos(matricula,numAsientos,color,precio,numBastidor)values('" + matricula
-		// 					+ "','" + numAsientos + "','" + color+ "','" + precio
-		// 					+ "','" + numBastidor+ "');");
-		// 			out.println("Data is successfully inserted!");
-		// 		} catch (Exception e) {
-		// 			System.out.print(e);
-		// 			e.printStackTrace();
-		// 		}
 	%>
 </body>
 </html>

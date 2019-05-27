@@ -36,34 +36,33 @@
 		String precio = request.getParameter("precio");
 		String numPuertas = request.getParameter("numPuertas");
 		String cMaletero = request.getParameter("cMaletero");
-		
 
-		
 		// inserta en la tabla de vehiculos
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,tipoVehiculo)values('" + matricula
-					+ "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor + "','coche')";
+			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,tipoVehiculo)values('"
+					+ matricula + "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor
+					+ "','coche')";
 			statement.executeUpdate(sql);
 
 		} catch (Exception e) {
 			e.printStackTrace();
- 		}
+			response.sendRedirect("fallo.html");
+		}
 		// inserta en la tabla coches
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "insert into coches(idVehiculo,matricula,nPuertas,cMaletero)values((select max(idVehiculo) from vehiculos),'" + matricula + "','"
-					+ numPuertas + "','" + cMaletero + "')";
+			String sql = "insert into coches(idVehiculo,matricula,nPuertas,cMaletero)values((select max(idVehiculo) from vehiculos),'"
+					+ matricula + "','" + numPuertas + "','" + cMaletero + "')";
 			statement.executeUpdate(sql);
 			response.sendRedirect("success.html");
-			
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			response.sendRedirect("fallo.html");
 		}
-		
 	%>
 </body>
 </html>

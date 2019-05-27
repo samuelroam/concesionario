@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@page import="java.sql.*" %>
+	pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
+	<%
 		String driverName = "com.mysql.jdbc.Driver";
 		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
 		String dbName = "concesionario";
@@ -25,8 +25,6 @@
 		Statement statement = null;
 		ResultSet resultSet = null;
 	%>
-
-
 	<%
 		String idVehiculo = request.getParameter("idVehiculo");
 		String matricula = request.getParameter("matricula");
@@ -37,32 +35,31 @@
 		String carga = request.getParameter("carga");
 		String tMercancia = request.getParameter("tMercancia");
 
-		
-
+		// actualiza la tabla de vehiculos
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "update vehiculos set matricula = '"+matricula+"', numAsientos='"+numAsientos+"', color='"+color+"', precio='"+precio+"', numBastidor='"+numBastidor+"' where idVehiculo='"+idVehiculo+"';";
-// 					"insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,tipoVehiculo)values('" + matricula
-// 					+ "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor + "','coche')";
+			String sql = "update vehiculos set matricula = '" + matricula + "', numAsientos='" + numAsientos
+					+ "', color='" + color + "', precio='" + precio + "', numBastidor='" + numBastidor
+					+ "' where idVehiculo='" + idVehiculo + "';";
 			statement.executeUpdate(sql);
-			response.sendRedirect("ca.jsp");
 
 		} catch (Exception e) {
 			e.printStackTrace();
- 		}
-
+			response.sendRedirect("fallo.html");
+		}
+		// actualiza la tabla de camiones
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "update vehiculos set matricula='"+matricula+"', carga='"+carga+"',tMercancia='"+tMercancia+"'where idVehiculo='"+idVehiculo+"';";
+			String sql = "update camiones set matricula='" + matricula + "', carga='" + carga + "',tMercancia='"
+					+ tMercancia + "'where idVehiculo='" + idVehiculo + "';";
 			statement.executeUpdate(sql);
-			
-			response.sendRedirect("co.jsp");
-			
+			response.sendRedirect("listaCa.jsp");
 
 		} catch (Exception e) {
 			e.printStackTrace();
+			response.sendRedirect("fallo.html");
 		}
 	%>
 </body>

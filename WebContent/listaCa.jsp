@@ -62,8 +62,6 @@
 						i++;
 			%>
 			<tr bgcolor="#8FBC8F">
-
-				<%-- 			<td><% out.println(i); %></td> --%>
 				<td><%=resultSet.getString("idVehiculo")%></td>
 				<td><%=resultSet.getString("matricula")%></td>
 				<td><%=resultSet.getString("numBastidor")%></td>
@@ -73,10 +71,11 @@
 				<td><%=resultSet.getString("nSerie")%></td>
 				<td><%=resultSet.getString("carga")%></td>
 				<td><%=resultSet.getString("tMercancia")%></td>
-				<td><input type="radio" name="select" value="<%=resultSet.getString("idVehiculo")%>"></input></td>
-				<td><a href="../concesionario/editarCa.jsp?idVehiculo=<%=resultSet.getString("idVehiculo") %>">editar</a></td>
+				<td><input type="radio" name="select"
+					value="<%=resultSet.getString("idVehiculo")%>"></input></td>
+				<td><a
+					href="../concesionario/editarCa.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">editar</a></td>
 			</tr>
-
 			<%
 				}
 
@@ -84,7 +83,6 @@
 					e.printStackTrace();
 				}
 			%>
-
 		</table>
 		<input type="submit" name="borrar" value="borrar">
 	</form>
