@@ -39,6 +39,7 @@
 
 		
 
+		// inserta en la tabla de vehiculos
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
@@ -49,10 +50,11 @@
 		} catch (Exception e) {
 			e.printStackTrace();
  		}
+		// inserta en la tabla camiones
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "insert into camiones(matricula,carga,tMercancia)values('" + matricula + "','"
+			String sql = "insert into camiones(idVehiculo,matricula,carga,tMercancia)values((select max(idVehiculo) from vehiculos),'" + matricula + "','"
 					+ carga + "','" + tMercancia + "')";
 			statement.executeUpdate(sql);
 // 			statement.close();

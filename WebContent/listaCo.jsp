@@ -8,6 +8,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link href="css.css" rel="stylesheet" type="text/css" />
 <title>Insert title here</title>
 </head>
 <body>
@@ -92,5 +93,7 @@
 		</table>
 		<input type="submit" name="borrar" value="borrar">
 	</form>
+	<a class="tabla" href="index.jsp">Volver al inicio</a>
+	<a class="tabla" href="insertCo.jsp">Insertar vehiculo</a>
 </body>
 </html>

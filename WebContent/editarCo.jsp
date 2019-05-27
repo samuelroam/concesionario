@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link href="css.css" rel="stylesheet" type="text/css" />
 <title>Insert title here</title>
 </head>
 <body>

@@ -8,6 +8,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link href="css.css" rel="stylesheet" type="text/css" />
 <title>Insert title here</title>
 </head>
 <body>
@@ -47,6 +48,7 @@
 				<td><b>serie</b></td>
 				<td><b>carga</b></td>
 				<td><b>tipo mercancia</b></td>
+				<td><b>borrar</b></td>
 			</tr>
 			<%
 				int i = 0;
@@ -86,5 +88,7 @@
 		</table>
 		<input type="submit" name="borrar" value="borrar">
 	</form>
+	<a class="tabla" href="index.jsp">Volver al inicio</a>
+	<a class="tabla" href="insertCa.jsp">Insertar vehiculo</a>
 </body>
 </html>

@@ -28,7 +28,7 @@
 		
 		String select= request.getParameter("select");
 		
-		// borra el registro de la tabla vehiculos
+		
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
@@ -39,11 +39,10 @@
 		} catch (Exception e) {
 			e.printStackTrace();
  		}
-		// borra el registro de la tabla coches
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "delete from coches where idVehiculo="+select+";";
+			String sql = "delete from camiones where idVehiculo="+select+";";
 					statement.executeUpdate(sql);
 					response.sendRedirect("listaCo.jsp");
 
@@ -51,6 +50,5 @@
 			e.printStackTrace();
  		}
 	%>
-
 </body>
 </html>

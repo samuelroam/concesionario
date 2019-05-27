@@ -37,7 +37,6 @@
 		String numPuertas = request.getParameter("numPuertas");
 		String cMaletero = request.getParameter("cMaletero");
 		
-		String idVehiculo;
 
 		
 		// inserta en la tabla de vehiculos
@@ -51,20 +50,7 @@
 		} catch (Exception e) {
 			e.printStackTrace();
  		}
-// 		//busca la id de vehiculos
-// 				try {
-// 					connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
-// 					statement = connection.createStatement();
-// 					String sql = "select last_insert_id() from vehiculos";
-// 					resultSet=statement.executeQuery(sql);
-					
-
-// 				} catch (Exception e) {
-// 					e.printStackTrace();
-// 				}
-// 	//	idVehiculo=resultSet.getString("last_insert_id()");
-		
-		//inserta en la tabla de coches
+		// inserta en la tabla coches
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();

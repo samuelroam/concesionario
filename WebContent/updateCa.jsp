@@ -51,18 +51,19 @@
 		} catch (Exception e) {
 			e.printStackTrace();
  		}
-// 		try {
-// 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
-// 			statement = connection.createStatement();
-// 			String sql = "insert into coches(matricula,nPuertas,cMaletero)values('" + matricula + "','"
-// 					+ numPuertas + "','" + cMaletero + "')";
-// 			statement.executeUpdate(sql);
-// 			response.sendRedirect("success.html");
+
+		try {
+			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
+			statement = connection.createStatement();
+			String sql = "update vehiculos set matricula='"+matricula+"', carga='"+carga+"',tMercancia='"+tMercancia+"'where idVehiculo='"+idVehiculo+"';";
+			statement.executeUpdate(sql);
+			
+			response.sendRedirect("co.jsp");
 			
 
-// 		} catch (Exception e) {
-// 			e.printStackTrace();
-// 		}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	%>
 </body>
 </html>
