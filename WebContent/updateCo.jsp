@@ -5,9 +5,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Proceso editar coche</title>
 </head>
-<body>
+<body id="co">
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
 		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
@@ -46,7 +46,6 @@
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			response.sendRedirect("fallo.html");
 		}
 		// actualiza la tabla de coches
 		try {
@@ -59,7 +58,6 @@
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			response.sendRedirect("fallo.html");
 		}
 	%>
 </body>

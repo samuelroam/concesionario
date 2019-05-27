@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Proceso borrar camion</title>
 </head>
 <body>
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
-		String connectionUrl = "jdbc:mysql://10.18.124.73:3306/";
+		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
 		String dbName = "concesionario";
 		String userId = "gerente";
 		String password = "root";
@@ -36,7 +36,6 @@
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			response.sendRedirect("fallo.html");
 		}
 		// borra el registro de la tabla camiones
 		try {
@@ -48,7 +47,6 @@
 
 		} catch (Exception e) {
 			e.printStackTrace();
-			response.sendRedirect("fallo.html");
 		}
 	%>
 </body>

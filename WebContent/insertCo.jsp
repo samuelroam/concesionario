@@ -5,9 +5,9 @@
 <head>
 <link href="css.css" rel="stylesheet" type="text/css" />
 <meta charset="ISO-8859-1">
-<title>Insertar coche</title>
+<title>Formulario insertar coche</title>
 </head>
-<body>
+<body id="co">
 	<table border="1" width="50%" id="tab">
 		<tr>
 			<td width="100%">

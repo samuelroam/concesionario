@@ -1,6 +1,14 @@
 @charset "ISO-8859-1";
 body{
-	
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#ca{
+	background-image: url("Camion.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+#co{
 	background-image: url("coche1.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -15,9 +23,7 @@ h2{
 a{
 	text-align: center;
 	color: white;
-	margin-left:29%;
 	font-size:20px;
-	transition:1s;
 }
 .insertar{
 	color:white;
@@ -26,9 +32,6 @@ a{
 	color:white;
 	text-shadow: 5px 4px 2px #000000;
 }
-a:hover{
-	font-size:30px;
-}
 #tab{
 	margin-left:22%;
 }
@@ -36,7 +39,4 @@ a:hover{
 	background-color:lightgreen;
 	color:#000000;
 	transition: none;
-}
-.tabla:hover{
-	font-size:20px;
 }

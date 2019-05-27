@@ -5,9 +5,9 @@
 <head>
 <link href="css.css" rel="stylesheet" type="text/css" />
 <meta charset="ISO-8859-1">
-<title>Insertar camion</title>
+<title>Formulario insertar camion</title>
 </head>
-<body>
+<body id="ca" style="background-image:url('Camion.jpg')">
 	<table border="1" width="50%" id="tab">
 		<tr>
 			<td width="100%">
@@ -53,6 +53,7 @@
 								pattern="[0-9]{3}" title="Numero de 3 cifras"></td>
 						</tr>
 						<tr class="insert">
+						<td width="50%"><b>tipoMercancia:</b></td>
 							<td width="50%"><b>tipoMercancia:</b></td>
 							<td width="50%"><input type="text" name="tMercancia"
 								size="50" placeholder="Tipo de Mercancia" minlength="1"

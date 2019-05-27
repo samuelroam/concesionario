@@ -9,9 +9,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <link href="css.css" rel="stylesheet" type="text/css" />
-<title>Insert title here</title>
+<title>Lista camiones</title>
 </head>
-<body>
+<body id="ca" style="background-image:url('Camion.jpg')">
 
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
@@ -31,7 +31,7 @@
 		ResultSet resultSet = null;
 	%>
 	<h2 align="center">
-		<font color="#f0595e"><strong>Select query in JSP</strong></font>
+		<font color="#f0595e"><strong>Lista de camiones</strong></font>
 	</h2>
 	<form method="POST" action="deleteCa.jsp">
 		<table align="center" cellpadding="4" cellspacing="4">
@@ -75,6 +75,8 @@
 					value="<%=resultSet.getString("idVehiculo")%>"></input></td>
 				<td><a
 					href="../concesionario/editarCa.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">editar</a></td>
+				<td><a
+					href="../concesionario/verVehiculo.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">ver</a></td>
 			</tr>
 			<%
 				}

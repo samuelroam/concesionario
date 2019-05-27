@@ -9,9 +9,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <link href="css.css" rel="stylesheet" type="text/css" />
-<title>Insert title here</title>
+<title>Lista coches</title>
 </head>
-<body>
+<body id="co">
 
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
@@ -31,7 +31,7 @@
 		ResultSet resultSet = null;
 	%>
 	<h2 align="center">
-		<font color="#f0595e"><strong>Select query in JSP</strong></font>
+		<font color="#f0595e"><strong>Lista de coches</strong></font>
 	</h2>
 	<form method="POST" action="deleteCo.jsp">
 		<table align="center" cellpadding="4" cellspacing="4">

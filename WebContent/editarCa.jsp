@@ -6,9 +6,9 @@
 <head>
 <meta charset="ISO-8859-1">
 <link href="css.css" rel="stylesheet" type="text/css" />
-<title>Insert title here</title>
+<title>Formulario editar camion</title>
 </head>
-<body>
+<body id="ca" style="background-image:url('Camion.jpg')">
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
 		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
@@ -124,5 +124,7 @@
 			e.printStackTrace();
 		}
 	%>
+	<a class="tabla" href="index.jsp">Volver al inicio</a>
+	<a class="tabla" href="insertCa.jsp">Insertar vehiculo</a>
 </body>
 </html>
