@@ -53,19 +53,11 @@
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>Matricula:</b></td>
-							<td width="50%"><input type="text" name="matricula"
-								value="<%=resultSet.getString("matricula")%>"
-								placeholder="<%=resultSet.getString("matricula")%>" size="50"
-								minlength="6" maxlength="7" required pattern="[A-Z0-9]{6,7}"
-								title="Numeros y Mayusculas" /></td>
+							<td width="50%"><p><%=resultSet.getString("matricula")%></p></td>
 						</tr>
 						<tr>
 							<td width="50%"><b>numBastidor:</b></td>
-							<td width="50%"><input type="number" name="numBastidor"
-								value="<%=resultSet.getString("numBastidor")%>"
-								placeholder="<%=resultSet.getString("numBastidor")%>" size="50"
-								minlength="4" maxlength="4" required pattern="[0-9]{4}"
-								title="Numero de 4 cifras"></td>
+							<td width="50%"><p><%=resultSet.getString("numBastidor")%></p></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>Color:</b></td>
@@ -78,11 +70,7 @@
 						<tr class="insert">
 							<td width="50%"><b>numAsientos:</b></td>
 
-							<td width="50%"><input type="text" name="numAsientos"
-								size="50" value="<%=resultSet.getString("numAsientos")%>"
-								placeholder="<%=resultSet.getString("numAsientos")%>"
-								minlength="1" maxlength="1" required pattern="[1-9]{1}"
-								title="Numero del 1 al 9"></td>
+							<td width="50%"><p><%=resultSet.getString("numAsientos")%></p></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>precio:</b></td>
@@ -94,11 +82,7 @@
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>Carga:</b></td>
-							<td width="50%"><input type="text" name="carga" size="50"
-								value="<%=resultSet.getString("carga")%>"
-								placeholder="<%=resultSet.getString("carga")%>" minlength="3"
-								maxlength="3" required pattern="[0-9]{3}"
-								title="Numero de 3 cifras"></td>
+							<td width="50%"><p><%=resultSet.getString("carga")%></p></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>tipoMercancia:</b></td>
@@ -110,9 +94,10 @@
 						</tr>
 					</table>
 					<p>
-						<input type="submit" value="Enviar" name="Enviar"> <input
-							type="reset" value="Borrar" name="Borrar">
+						<input class="button" type="submit" value="Enviar" name="Enviar"> <input
+							class="button" type="reset" value="Borrar" name="Borrar">
 					</p>
+
 				</form>
 			</td>
 		</tr>
@@ -124,7 +109,6 @@
 			e.printStackTrace();
 		}
 	%>
-	<a class="tabla" href="index.jsp">Volver al inicio</a>
-	<a class="tabla" href="insertCa.jsp">Insertar vehiculo</a>
+	<a class="tabla" href="listaCa.jsp">Volver</a>
 </body>
 </html>

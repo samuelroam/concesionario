@@ -10,9 +10,10 @@
 <body style="background-image:url('coche1.jpg')">
 
 	<h1>SELECIONA TIPO DE VEHICULO</h1>
-	<a href="listaCo.jsp">Coche</a>
-	<a href="listaCa.jsp">Camion</a>
-	<a href="buscar.jsp">Buscar</a>
+	<a class="titulo" href="listaCo.jsp">Coche</a>
+	<a class="titulo" href="listaCa.jsp">Camion</a>
+	<a class="titulo" href="buscar.jsp">Buscar</a>
+	<!-- 					RiCc68ftd00D4lyf -->
 
 </body>
 </html>

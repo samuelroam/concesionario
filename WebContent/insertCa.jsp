@@ -53,7 +53,6 @@
 								pattern="[0-9]{3}" title="Numero de 3 cifras"></td>
 						</tr>
 						<tr class="insert">
-						<td width="50%"><b>tipoMercancia:</b></td>
 							<td width="50%"><b>tipoMercancia:</b></td>
 							<td width="50%"><input type="text" name="tMercancia"
 								size="50" placeholder="Tipo de Mercancia" minlength="1"
@@ -62,8 +61,8 @@
 						</tr>
 					</table>
 					<p>
-						<input type="submit" value="Enviar" name="Enviar"> <input
-							type="reset" value="Borrar" name="Borrar">
+						<input class="button" type="submit" value="Enviar" name="Enviar"> <input
+							class="button" type="reset" value="Borrar" name="Borrar">
 					</p>
 				</form>
 			</td>

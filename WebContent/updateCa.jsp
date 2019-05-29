@@ -39,9 +39,7 @@
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "update vehiculos set matricula = '" + matricula + "', numAsientos='" + numAsientos
-					+ "', color='" + color + "', precio='" + precio + "', numBastidor='" + numBastidor
-					+ "' where idVehiculo='" + idVehiculo + "';";
+			String sql = "update vehiculos set color='" + color + "', precio='" + precio + "' where idVehiculo='" + idVehiculo + "';";
 			statement.executeUpdate(sql);
 
 		} catch (Exception e) {
@@ -51,8 +49,7 @@
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "update camiones set matricula='" + matricula + "', carga='" + carga + "',tMercancia='"
-					+ tMercancia + "'where idVehiculo='" + idVehiculo + "';";
+			String sql = "update camiones set tMercancia='"+ tMercancia + "'where idVehiculo='" + idVehiculo + "';";
 			statement.executeUpdate(sql);
 			response.sendRedirect("listaCa.jsp");
 

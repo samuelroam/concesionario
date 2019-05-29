@@ -11,7 +11,7 @@
   Buscar color: <input type="search" name="color"><br>
   <input type="submit">
   <br>
-  <a href="index.jsp">volver al inicio</a>
+  <a class="tabla" style="background-color:lightgreen;color:#000000;margin-left:10%;" href="index.jsp">volver al inicio</a>
 </form>
 </body>
 </html>

@@ -13,30 +13,70 @@ body{
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
+
 h1{
 	text-align: center;
 	color: #f0595e;
+	font-size: 35px;
 }
 h2{
 	color:white;
-}
-a{
+	text-shadow: 1px 1px 1px #000000;
 	text-align: center;
-	color: white;
-	font-size:20px;
+}
+.titulo{
+	text-align: center;
+	color: #f0595e;
+	font-size:25px;
+	text-decoration:none;
+	text-shadow: 3px 3px 2px #000000;
+	font-weight:bold;
+	margin-left: 20%;
 }
 .insertar{
 	color:white;
 }
 .insert{
 	color:white;
-	text-shadow: 5px 4px 2px #000000;
+	text-shadow: 2px 2px 2px #000000;
+
 }
 #tab{
 	margin-left:22%;
+
 }
+
 .tabla{
+	float:left;
 	background-color:lightgreen;
 	color:#000000;
-	transition: none;
+	margin-left:30%;
+	margin-top:2%;
+}
+.edicion{
+	color:black;
+	text-align:center;
+	text-decoration:none;
+}
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #38a404;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 9px #888;
+  margin-left: 27.43%;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #333;
+  transform: translateY(4px);
 }

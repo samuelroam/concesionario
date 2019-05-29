@@ -48,14 +48,14 @@
 				<td><b>serie</b></td>
 				<td><b>numero puertas</b></td>
 				<td><b>capacidad maletero</b></td>
-				<td><b>borrar</b></td>
+				<td><b>vender</b></td>
 			</tr>
 			<%
 				int i = 0;
 				try {
 					connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 					statement = connection.createStatement();
-					String sql = "SELECT v.idVehiculo, c.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.nPuertas, c.cMaletero FROM coches c inner join vehiculos v where c.matricula = v.matricula";
+					String sql = "SELECT v.idVehiculo, v.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.nPuertas, c.cMaletero FROM coches c inner join vehiculos v where c.matricula = v.matricula and v.idVehiculo = c.idVehiculo";
 
 					resultSet = statement.executeQuery(sql);
 					while (resultSet.next()) {
@@ -73,8 +73,8 @@
 				<td><%=resultSet.getString("cMaletero")%></td>
 				<td><input type="radio" name="select"
 					value="<%=resultSet.getString("idVehiculo")%>"></input></td>
-				<td><a
-					href="../concesionario/editarCo.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">editar</a></td>
+				<td><a class="edicion"
+					href="../concesionario/editarCo.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">Pintar</a></td>
 			</tr>
 			<%
 				}
@@ -84,9 +84,9 @@
 				}
 			%>
 		</table>
-		<input type="submit" name="borrar" value="borrar">
+		<input class="button" type="submit" name="borrar" value="$$$ vender $$$">
 	</form>
 	<a class="tabla" href="index.jsp">Volver al inicio</a>
-	<a class="tabla" href="insertCo.jsp">Insertar vehiculo</a>
+	<a class="tabla" href="insertCo.jsp">Comprar</a>
 </body>
 </html>

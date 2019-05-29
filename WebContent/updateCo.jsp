@@ -39,26 +39,25 @@
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "update vehiculos set matricula = '" + matricula + "', numAsientos='" + numAsientos
-					+ "', color='" + color + "', precio='" + precio + "', numBastidor='" + numBastidor
-					+ "' where idVehiculo='" + idVehiculo + "';";
-			statement.executeUpdate(sql);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		// actualiza la tabla de coches
-		try {
-			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
-			statement = connection.createStatement();
-			String sql = "update coches set matricula='" + matricula + "', nPuertas='" + numPuertas
-					+ "',cMaletero='" + cMaletero + "'where idVehiculo='" + idVehiculo + "';";
+			String sql = "update vehiculos set color='" + color + "', precio='" + precio + "' where idVehiculo='" + idVehiculo + "';";
 			statement.executeUpdate(sql);
 			response.sendRedirect("listaCo.jsp");
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		// actualiza la tabla de coches
+// 		try {
+// 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
+// 			statement = connection.createStatement();
+// 			String sql = "update coches set matricula='" + matricula + "', nPuertas='" + numPuertas
+// 					+ "',cMaletero='" + cMaletero + "'where idVehiculo='" + idVehiculo + "';";
+// 			statement.executeUpdate(sql);
+// 			response.sendRedirect("listaCo.jsp");
+
+// 		} catch (Exception e) {
+// 			e.printStackTrace();
+// 		}
 	%>
 </body>
 </html>
