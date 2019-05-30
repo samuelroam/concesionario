@@ -18,9 +18,8 @@
 						<tr class="insert">
 							<td width="50%"><b>Matricula:</b></td>
 							<td width="50%"><input type="text" name="matricula"
-								size="50" placeholder="Matricula"
-								minlength="6" maxlength="7" required pattern="[A-Z0-9]{6,7}"
-								title="Numeros y Mayusculas" /></td>
+								size="50" placeholder="Matricula" minlength="6" maxlength="7"
+								required pattern="[A-Z0-9]{6,7}" title="Numeros y Mayusculas" /></td>
 						</tr>
 						<tr>
 							<td width="50%"><b>numBastidor:</b></td>
@@ -50,9 +49,8 @@
 						<tr class="insert">
 							<td width="50%"><b>serie:</b></td>
 							<td width="50%"><input type="text" name="nSerie" size="50"
-								placeholder="serie" minlength="4"
-								maxlength="4" required pattern="[0-9]{4,6}"
-								title="Numero de 4 cifras"></td>
+								placeholder="serie" minlength="4" maxlength="4" required
+								pattern="[0-9]{4,6}" title="Numero de 4 cifras"></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>numPuertas:</b></td>

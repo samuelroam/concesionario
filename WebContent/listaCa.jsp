@@ -75,8 +75,6 @@
 					value="<%=resultSet.getString("idVehiculo")%>"></input></td>
 				<td><a class="edicion"
 					href="../concesionario/editarCa.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">Pintar</a></td>
-				<!-- 				<td><a class="edicion" -->
-				<%-- 					href="../concesionario/verVehiculo.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">ver</a></td> --%>
 			</tr>
 			<%
 				}
@@ -87,8 +85,9 @@
 			%>
 		</table>
 		<a class="button" href="index.jsp">Volver al inicio</a> <input
-			class="button" type="submit" name="borrar" value="$$$ vender $$$" title="Borra el vehiculo seleccionado">
-		<a class="button" href="insertCa.jsp" title="Inserta un nuevo vehiculo">Comprar</a>
+			class="button" type="submit" name="borrar" value="$$$ vender $$$"
+			title="Borra el vehiculo seleccionado"> <a class="button"
+			href="insertCa.jsp" title="Inserta un nuevo vehiculo">Comprar</a>
 	</form>
 
 </body>

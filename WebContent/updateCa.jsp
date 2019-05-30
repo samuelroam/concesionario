@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Proceso editar camion</title>
 </head>
-<body id="ca" style="background-image:url('Camion.jpg')">
+<body id="ca" style="background-image: url('Camion.jpg')">
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
 		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
@@ -39,7 +39,8 @@
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "update vehiculos set color='" + color + "', precio='" + precio + "' where idVehiculo='" + idVehiculo + "';";
+			String sql = "update vehiculos set color='" + color + "', precio='" + precio + "' where idVehiculo='"
+					+ idVehiculo + "';";
 			statement.executeUpdate(sql);
 
 		} catch (Exception e) {
@@ -49,7 +50,8 @@
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "update camiones set tMercancia='"+ tMercancia + "'where idVehiculo='" + idVehiculo + "';";
+			String sql = "update camiones set tMercancia='" + tMercancia + "'where idVehiculo='" + idVehiculo
+					+ "';";
 			statement.executeUpdate(sql);
 			response.sendRedirect("listaCa.jsp");
 

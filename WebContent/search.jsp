@@ -45,15 +45,14 @@
 			String color = request.getParameter("color");
 			String easterEgg = "RiCc6'8ftD00d";
 
-			
-				try {
-					connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
-					statement = connection.createStatement();
-					String sql = "SELECT idVehiculo, matricula, numBastidor, color, numAsientos, precio, nSerie, tipoVehiculo FROM vehiculos where color like '"
-							+ color + "';";
+			try {
+				connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
+				statement = connection.createStatement();
+				String sql = "SELECT idVehiculo, matricula, numBastidor, color, numAsientos, precio, nSerie, tipoVehiculo FROM vehiculos where color like '"
+						+ color + "';";
 
-					resultSet = statement.executeQuery(sql);
-					while (resultSet.next()) {
+				resultSet = statement.executeQuery(sql);
+				while (resultSet.next()) {
 		%>
 
 		<tr bgcolor="#8FBC8F">
@@ -70,10 +69,9 @@
 		<%
 			}
 
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		%>
 	</table>
 	<a class="tabla"
@@ -82,6 +80,6 @@
 	<a class="tabla"
 		style="background-color: lightgreen; color: #000000; margin-left: 10%;"
 		href="index.jsp">Volver al inicio</a>
-		
+
 </body>
 </html>

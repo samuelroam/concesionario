@@ -8,7 +8,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link href="../../concesionario/css.css" rel="stylesheet" type="text/css" />
+<link href="../../concesionario/css.css" rel="stylesheet"
+	type="text/css" />
 <title>Lista coches</title>
 </head>
 <body id="co">
@@ -84,10 +85,10 @@
 				}
 			%>
 		</table>
-				<a class="button" href="index.jsp">Volver al inicio</a>
-		<input class="button" type="submit" name="borrar" value="$$$ vender $$$" title="Borra el vehiculo seleccionado">
-
-	<a class="button" href="insertCo.jsp" title="Inserta un nuevo vehiculo">Comprar</a>
+		<a class="button" href="index.jsp">Volver al inicio</a> <input
+			class="button" type="submit" name="borrar" value="$$$ vender $$$"
+			title="Borra el vehiculo seleccionado"> <a class="button"
+			href="insertCo.jsp" title="Inserta un nuevo vehiculo">Comprar</a>
 	</form>
 </body>
 </html>

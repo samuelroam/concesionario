@@ -1,15 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@page import="java.sql.*" %>
+	pageEncoding="ISO-8859-1"%>
+<%@page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
-<link href="../../concesionario/css.css" rel="stylesheet" type="text/css" />
+<link href="../../concesionario/css.css" rel="stylesheet"
+	type="text/css" />
 <meta charset="ISO-8859-1">
 <title>Lista de vehiculos</title>
 </head>
-<body style="background-image:url('bugatti.jpg')">
-<%
+<body style="background-image: url('bugatti.jpg')">
+	<%
 		String driverName = "com.mysql.jdbc.Driver";
 		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
 		String dbName = "concesionario";
@@ -64,8 +65,7 @@
 				<td><%=resultSet.getString("precio")%></td>
 				<td><%=resultSet.getString("nSerie")%></td>
 				<td><%=resultSet.getString("tipoVehiculo")%></td>
-				
-				</tr>
+			</tr>
 			<%
 				}
 
@@ -74,7 +74,7 @@
 				}
 			%>
 		</table>
-		<a class="button" href="index.jsp">Volver al inicio</a> 
+		<a class="button" href="index.jsp">Volver al inicio</a>
 	</form>
 </body>
 </html>

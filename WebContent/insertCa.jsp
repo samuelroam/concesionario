@@ -7,7 +7,7 @@
 <meta charset="ISO-8859-1">
 <title>Formulario insertar camion</title>
 </head>
-<body id="ca" style="background-image:url('Camion.jpg')">
+<body id="ca" style="background-image: url('Camion.jpg')">
 	<table border="1" width="50%" id="tab">
 		<tr>
 			<td width="100%">
@@ -49,9 +49,8 @@
 						<tr class="insert">
 							<td width="50%"><b>serie:</b></td>
 							<td width="50%"><input type="text" name="nSerie" size="50"
-								placeholder="serie" minlength="4"
-								maxlength="4" required pattern="[0-9]{4,6}"
-								title="Numero de 4 cifras"></td>
+								placeholder="serie" minlength="4" maxlength="4" required
+								pattern="[0-9]{4,6}" title="Numero de 4 cifras"></td>
 						</tr>
 						<tr class="insert">
 							<td width="50%"><b>Carga:</b></td>
@@ -68,8 +67,8 @@
 						</tr>
 					</table>
 					<p>
-						<input class="button" type="submit" value="Enviar" name="Enviar"> <input
-							class="button" type="reset" value="Limpiar" name="Borrar">
+						<input class="button" type="submit" value="Enviar" name="Enviar">
+						<input class="button" type="reset" value="Limpiar" name="Borrar">
 					</p>
 				</form>
 			</td>
