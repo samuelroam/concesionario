@@ -1,19 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@page import="java.sql.DriverManager"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="java.sql.Connection"%>
+    pageEncoding="ISO-8859-1"%>
+    <%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <link href="../../concesionario/css.css" rel="stylesheet" type="text/css" />
-<title>Lista coches</title>
+<meta charset="ISO-8859-1">
+<title>Lista de vehiculos</title>
 </head>
-<body id="co">
-
-	<%
+<body style="background-image:url('bugatti.jpg')">
+<%
 		String driverName = "com.mysql.jdbc.Driver";
 		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
 		String dbName = "concesionario";
@@ -31,9 +27,9 @@
 		ResultSet resultSet = null;
 	%>
 	<h2 align="center">
-		<font color="#f0595e"><strong>Lista de coches</strong></font>
+		<font color="#f0595e"><strong>Lista de vehiculos</strong></font>
 	</h2>
-	<form method="POST" action="deleteCo.jsp">
+	<form method="POST" action="deleteCa.jsp">
 		<table align="center" cellpadding="4" cellspacing="4">
 			<tr>
 
@@ -46,16 +42,14 @@
 				<td><b>numero asientos</b></td>
 				<td><b>precio</b></td>
 				<td><b>serie</b></td>
-				<td><b>numero puertas</b></td>
-				<td><b>capacidad maletero</b></td>
-				<td><b>vender</b></td>
+				<td><b>carga</b></td>
 			</tr>
 			<%
 				int i = 0;
 				try {
 					connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 					statement = connection.createStatement();
-					String sql = "SELECT v.idVehiculo, v.matricula, v.numBastidor, v.color, v.numAsientos, v.precio, v.nSerie, c.nPuertas, c.cMaletero FROM coches c inner join vehiculos v where c.matricula = v.matricula and v.idVehiculo = c.idVehiculo";
+					String sql = "SELECT idVehiculo, matricula, numBastidor, color, numAsientos, precio, nSerie, tipoVehiculo FROM vehiculos";
 
 					resultSet = statement.executeQuery(sql);
 					while (resultSet.next()) {
@@ -69,13 +63,9 @@
 				<td><%=resultSet.getString("numAsientos")%></td>
 				<td><%=resultSet.getString("precio")%></td>
 				<td><%=resultSet.getString("nSerie")%></td>
-				<td><%=resultSet.getString("nPuertas")%></td>
-				<td><%=resultSet.getString("cMaletero")%></td>
-				<td><input type="radio" name="select"
-					value="<%=resultSet.getString("idVehiculo")%>"></input></td>
-				<td><a class="edicion"
-					href="../../concesionario/editarCo.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">Pintar</a></td>
-			</tr>
+				<td><%=resultSet.getString("tipoVehiculo")%></td>
+				
+				</tr>
 			<%
 				}
 
@@ -84,10 +74,7 @@
 				}
 			%>
 		</table>
-				<a class="button" href="index.jsp">Volver al inicio</a>
-		<input class="button" type="submit" name="borrar" value="$$$ vender $$$" title="Borra el vehiculo seleccionado">
-
-	<a class="button" href="insertCo.jsp" title="Inserta un nuevo vehiculo">Comprar</a>
+		<a class="button" href="index.jsp">Volver al inicio</a> 
 	</form>
 </body>
 </html>

@@ -43,7 +43,7 @@
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
 			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,nSerie,tipoVehiculo)values('"
-					+ matricula + "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor+"','"+nSerie
+					+ matricula + "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor+"', '6646F3G520K21"+nSerie
 					+ "','camion')";
 			statement.executeUpdate(sql);
 

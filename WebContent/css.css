@@ -26,6 +26,18 @@ h1:hover{
 	color:white;
 	text-shadow:2px 2px 2px black;
 }
+#easterEgg{
+	text-align: center;
+	text-decoration:none;
+	color: #f0595e;
+	font-size: 50px;
+	transition:1s;
+}
+#easterEgg:hover{
+	font-size:70px;
+	color:white;
+	text-shadow:2px 2px 2px black;
+}
 h2{
 	color:white;
 	text-shadow: 1px 1px 1px #000000;
