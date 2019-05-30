@@ -47,6 +47,13 @@
 								pattern="[0-9]{4,6}" title="Numero de 4 a 6 cifras"></td>
 						</tr>
 						<tr class="insert">
+							<td width="50%"><b>serie:</b></td>
+							<td width="50%"><input type="text" name="nSerie" size="50"
+								placeholder="serie" minlength="4"
+								maxlength="4" required pattern="[0-9]{4,6}"
+								title="Numero de 4 cifras"></td>
+						</tr>
+						<tr class="insert">
 							<td width="50%"><b>Carga:</b></td>
 							<td width="50%"><input type="text" name="carga" size="50"
 								placeholder="Carga en KG" minlength="3" maxlength="3" required

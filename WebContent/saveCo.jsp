@@ -36,7 +36,7 @@
 		String precio = request.getParameter("precio");
 		String numPuertas = request.getParameter("numPuertas");
 		String cMaletero = request.getParameter("cMaletero");
-		String nSerie = request.getParameter("serie");
+		String nSerie = request.getParameter("nSerie");
 
 		// inserta en la tabla de vehiculos
 		try {

@@ -36,13 +36,14 @@
 		String precio = request.getParameter("precio");
 		String carga = request.getParameter("carga");
 		String tMercancia = request.getParameter("tMercancia");
+		String nSerie = request.getParameter("nSerie");
 
 		// inserta en la tabla de vehiculos
 		try {
 			connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 			statement = connection.createStatement();
-			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,tipoVehiculo)values('"
-					+ matricula + "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor
+			String sql = "insert into vehiculos(matricula,numAsientos,color,precio,numBastidor,nSerie,tipoVehiculo)values('"
+					+ matricula + "','" + numAsientos + "','" + color + "','" + precio + "','" + numBastidor+"','"+nSerie
 					+ "','camion')";
 			statement.executeUpdate(sql);
 
