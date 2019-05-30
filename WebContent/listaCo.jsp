@@ -85,9 +85,9 @@
 			%>
 		</table>
 				<a class="button" href="index.jsp">Volver al inicio</a>
-		<input class="button" type="submit" name="borrar" value="$$$ vender $$$">
+		<input class="button" type="submit" name="borrar" value="$$$ vender $$$" title="Borra el vehiculo seleccionado">
 
-	<a class="button" href="insertCo.jsp">Comprar</a>
+	<a class="button" href="insertCo.jsp" title="Inserta un nuevo vehiculo">Comprar</a>
 	</form>
 </body>
 </html>

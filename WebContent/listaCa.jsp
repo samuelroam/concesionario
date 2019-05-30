@@ -11,7 +11,7 @@
 <link href="css.css" rel="stylesheet" type="text/css" />
 <title>Lista camiones</title>
 </head>
-<body id="ca" style="background-image:url('Camion.jpg')">
+<body id="ca" style="background-image: url('Camion.jpg')">
 
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
@@ -75,8 +75,8 @@
 					value="<%=resultSet.getString("idVehiculo")%>"></input></td>
 				<td><a class="edicion"
 					href="../concesionario/editarCa.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">Pintar</a></td>
-<!-- 				<td><a class="edicion" -->
-<%-- 					href="../concesionario/verVehiculo.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">ver</a></td> --%>
+				<!-- 				<td><a class="edicion" -->
+				<%-- 					href="../concesionario/verVehiculo.jsp?idVehiculo=<%=resultSet.getString("idVehiculo")%>">ver</a></td> --%>
 			</tr>
 			<%
 				}
@@ -86,9 +86,10 @@
 				}
 			%>
 		</table>
-		<input class="button" type="submit" name="borrar" value="$$$ vender $$$">
+		<a class="button" href="index.jsp">Volver al inicio</a> <input
+			class="button" type="submit" name="borrar" value="$$$ vender $$$" title="Borra el vehiculo seleccionado">
+		<a class="button" href="insertCa.jsp" title="Inserta un nuevo vehiculo">Comprar</a>
 	</form>
-	<a class="tabla" href="index.jsp">Volver al inicio</a>
-	<a class="tabla" href="insertCa.jsp">Comprar</a>
+
 </body>
 </html>

@@ -43,7 +43,7 @@
 
 		<%
 			String color = request.getParameter("color");
-			String easterEgg = "rojoj";
+			String easterEgg = "RiCc6'8ftD00d";
 
 			
 				try {

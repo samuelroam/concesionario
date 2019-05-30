@@ -22,7 +22,7 @@
 								required pattern="[A-Z0-9]{6,7}" title="Numeros y Mayusculas" />
 							</td>
 						</tr>
-						<tr>
+						<tr class="insert">
 							<td width="50%"><b>numBastidor:</b></td>
 							<td width="50%"><input type="text" name="numBastidor"
 								size="50" placeholder="Nº Bastidor" minlength="4" maxlength="4"
@@ -62,7 +62,7 @@
 					</table>
 					<p>
 						<input class="button" type="submit" value="Enviar" name="Enviar"> <input
-							class="button" type="reset" value="Borrar" name="Borrar">
+							class="button" type="reset" value="Limpiar" name="Borrar">
 					</p>
 				</form>
 			</td>
@@ -70,8 +70,8 @@
 	</table>
 	<%
 		out.println("<br>");
-		out.println("<a class='tabla' href='index.jsp'> Volver al inicio </a>");
-		out.println("<a class='tabla' href='listaCa.jsp'> Volver </a>");
+		out.println("<a class='button' href='index.jsp'> Volver al inicio </a>");
+		out.println("<a class='button' href='listaCa.jsp'> Volver </a>");
 	%>
 
 </body>

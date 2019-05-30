@@ -48,6 +48,13 @@
 								pattern="[0-9]{4,6}" title="Numero de 4 a 6 cifras"></td>
 						</tr>
 						<tr class="insert">
+							<td width="50%"><b>serie:</b></td>
+							<td width="50%"><input type="text" name="serie" size="50"
+								placeholder="serie" minlength="4"
+								maxlength="4" required pattern="[0-9]{4,6}"
+								title="Numero de 4 cifras"></td>
+						</tr>
+						<tr class="insert">
 							<td width="50%"><b>numPuertas:</b></td>
 							<td width="50%"><input type="text" name="numPuertas"
 								size="50" placeholder="Nº Puertas" minlength="1" maxlength="1"
@@ -62,8 +69,8 @@
 						</tr>
 					</table>
 					<p>
-						<input type="submit" value="Enviar" name="Enviar"> <input
-							type="reset" value="Borrar" name="Borrar">
+						<input class="button" type="submit" value="Enviar" name="Enviar">
+						<input class="button" type="reset" value="Limpiar" name="Borrar">
 					</p>
 				</form>
 			</td>
@@ -71,8 +78,8 @@
 	</table>
 	<%
 		out.println("<br>");
-		out.println("<a class='tabla' href='index.jsp'> Volver al inicio </a>");
-		out.println("<a class='tabla' href='listaCo.jsp'> Volver </a>");
+		out.println("<a class='button' href='index.jsp'> Volver al inicio </a>");
+		out.println("<a class='button' href='listaCo.jsp'> Volver </a>");
 	%>
 </body>
 </html>
