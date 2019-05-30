@@ -84,9 +84,10 @@
 				}
 			%>
 		</table>
+				<a class="button" href="index.jsp">Volver al inicio</a>
 		<input class="button" type="submit" name="borrar" value="$$$ vender $$$">
+
+	<a class="button" href="insertCo.jsp">Comprar</a>
 	</form>
-	<a class="tabla" href="index.jsp">Volver al inicio</a>
-	<a class="tabla" href="insertCo.jsp">Comprar</a>
 </body>
 </html>

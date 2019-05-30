@@ -45,11 +45,7 @@
 			String color = request.getParameter("color");
 			String easterEgg = "rojoj";
 
-			if (request.getParameter("color") == easterEgg) {
-				out.println(easterEgg);
-				response.sendRedirect("https://www.google.es/");
-			} else {
-out.println(easterEgg);
+			
 				try {
 					connection = DriverManager.getConnection(connectionUrl + dbName, userId, password);
 					statement = connection.createStatement();
@@ -77,7 +73,7 @@ out.println(easterEgg);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
-			}
+			
 		%>
 	</table>
 	<a class="tabla"
@@ -86,5 +82,6 @@ out.println(easterEgg);
 	<a class="tabla"
 		style="background-color: lightgreen; color: #000000; margin-left: 10%;"
 		href="index.jsp">Volver al inicio</a>
+		
 </body>
 </html>

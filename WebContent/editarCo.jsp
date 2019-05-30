@@ -8,7 +8,7 @@
 <link href="css.css" rel="stylesheet" type="text/css" />
 <title>Formulario editar coche</title>
 </head>
-<body id="co">
+<body style="background-image:url(coche2.jpg);">
 	<%
 		String driverName = "com.mysql.jdbc.Driver";
 		String connectionUrl = "jdbc:mysql://10.18.124.89:3306/";
@@ -89,10 +89,7 @@
 							<td width="50%"><p><%=resultSet.getString("cMaletero")%></p></td>
 						</tr>
 					</table>
-					<p>
-						<input class="button" type="submit" value="Enviar" name="Enviar"> <input
-							class="button" type="reset" value="Borrar" name="Borrar">
-					</p>
+					
 				</form>
 			</td>
 		</tr>
@@ -104,6 +101,12 @@
 			e.printStackTrace();
 		}
 	%>
-	<a class="tabla" href="listaCo.jsp">Volver</a>
+	<p>
+		<a class="button" href="listaCo.jsp">Volver</a>
+		<input class="button" type="submit" value="Enviar" name="Enviar"> 
+		<input class="button" type="reset" value="Borrar" name="Borrar">
+		
+	</p>
+	
 </body>
 </html>
